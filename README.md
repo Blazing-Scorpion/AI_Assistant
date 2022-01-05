@@ -82,18 +82,18 @@ functions in this program and all the features can be seen in the main screen of
 
 This program can perform the following functions:
 
-              * Interact to some extent					                    * Can open websites
-              * Open gmail, google search and YouTube			          * Autoplay song on YouTube using Keyword
+              * Interact to some extent					  * Can open websites
+              * Open gmail, google search and YouTube			  * Autoplay song on YouTube using Keyword
               * Download Youtube Video with Keyword or Video link	  * Hand-Cricket Game
-              * Number Guessing Game					                      * Can Shut down and Restart The Device
-              * Can Clear Temporary Files				                    * Generate QR Code
-              * Can help in Converting and Editing a PDF		        * Extract Text from an Image
-              * Tell a Joke						                              * It can open Instagram and Facebook
-              * Tell about the Weather of any place			            * Generate a Password
-              * Tell Time						                                * Open TOI for top Headlines
-              * Take Screenshot						                          * Capture a Picture from the Webcam
-              * Can redirect you to the Typing Speed Website		    * Test your Internet Speed
-              * Tell you the meaning					                      * Block / Unblock Websites
+              * Number Guessing Game					  * Can Shut down and Restart The Device
+              * Can Clear Temporary Files				  * Generate QR Code
+              * Can help in Converting and Editing a PDF		  * Extract Text from an Image
+              * Tell a Joke						  * It can open Instagram and Facebook
+              * Tell about the Weather of any place			  * Generate a Password
+              * Tell Time						  * Open TOI for top Headlines
+              * Take Screenshot						  * Capture a Picture from the Webcam
+              * Can redirect you to the Typing Speed Website		  * Test your Internet Speed
+              * Tell you the meaning					  * Block / Unblock Websites
 
 As you can see from the features above, this program is equipped with several features to provide convenience to the
 users. It can open any website from its name, can try to communicate upto a certain limit and help you with basic problems.
