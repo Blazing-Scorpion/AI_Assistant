@@ -261,6 +261,6 @@ class block_unblock_website:
             content = file.readlines()
             file.seek(0)
             for line in content:
-                if not self.website:
+                if self.website not in line:
                     file.write(line)
             file.truncate()
