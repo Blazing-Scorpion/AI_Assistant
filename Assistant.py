@@ -542,9 +542,9 @@ class Assistant:
 
     def block_website(self):
         self.say("Enter the website that you want to block.")
-        website_name = input("Enter the website")
+        website_name = input("Enter the website: ")
         self.say("Adding the site to block list.")
-        with open("temp/blocked_list.txt") as file:
+        with open("temp/blocked_list.txt", 'a') as file:
             file.write(website_name + "\n")
             file.close()
         blocker = block_unblock_website(website_name)
@@ -556,7 +556,7 @@ class Assistant:
         if not os.path.exists("temp/blocked_list.txt"):
             pass
         else:
-            with open("temp/blocked_list.txt") as file:
+            with open("temp/blocked_list.txt", 'r+') as file:
                 content = file.readlines()
             print("\nList of Blocked Websites: \n")
             for line in content:
