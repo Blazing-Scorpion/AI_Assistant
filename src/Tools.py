@@ -251,6 +251,9 @@ class block_unblock_website:
                 pass
             else:
                 file.write("\n" + self.redirect + " " + self.website + "\n")
+            if temp_website in content:
+                pass
+            else:
                 file.write("\n" + self.redirect + " " + temp_website + "\n")
 
     def unblock_websites(self):
