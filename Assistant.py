@@ -369,9 +369,6 @@ class Assistant:
             elif "spotify" in command:
                 pyautogui.write("spotify")
                 pyautogui.press("enter")
-            elif "microsoft browser" in command or "ms edge" in command:
-                pyautogui.write("MSEDGE")
-                pyautogui.press("enter")
             elif "control panel" in command:
                 pyautogui.write("control panel")
                 pyautogui.press("enter")
@@ -529,7 +526,8 @@ class Assistant:
         self.say("Top Headlines on the Times Of India's website has been opened. Happy Reading!")
 
     def wolf_alpha(self, counter, command):
-        app_id = "Your APP ID"
+        app_ids = ["PH4LL9-2QAQ4RP6JQ", "G28JJQ-WAA4J7J7H2", "3TQ6GK-22JA74GX9Y"]
+        app_id = random2.choice(app_ids)
         client = wolframalpha.Client(app_id)
         if counter == 1:
             self.say("I can try and answer computational and geographical questions.")
@@ -544,9 +542,11 @@ class Assistant:
         self.say("Enter the website that you want to block.")
         website_name = input("Enter the website: ")
         self.say("Adding the site to block list.")
-        with open("temp/blocked_list.txt", 'a') as file:
+        with open("temp/blocked_list.txt", "a") as file:
             file.write(website_name + "\n")
             file.close()
+        if not website_name.startswith("https://") or not website_name.startswith("www."):
+            website_name = "www." + website_name
         blocker = block_unblock_website(website_name)
         blocker.block_websites()
         self.say("The Website has been successfully blocked")
@@ -556,7 +556,7 @@ class Assistant:
         if not os.path.exists("temp/blocked_list.txt"):
             pass
         else:
-            with open("temp/blocked_list.txt", 'r+') as file:
+            with open("temp/blocked_list.txt", "r+") as file:
                 content = file.readlines()
             print("\nList of Blocked Websites: \n")
             for line in content:
@@ -744,14 +744,14 @@ class Assistant:
                     self.web_search(command)
             elif "copy" in command and "image" in command:
                 self.extract_text()
-            elif "block" in command and "website" in command:
-                if self.admin:
-                    self.block_website()
-                else:
-                    self.say("You don't have enough privileges to Run this command. ")
             elif "unblock" in command and "website" in command:
                 if self.admin:
                     self.unblock_website()
+                else:
+                    self.say("You don't have enough privileges to Run this command. ")
+            elif "block" in command and "website" in command:
+                if self.admin:
+                    self.block_website()
                 else:
                     self.say("You don't have enough privileges to Run this command. ")
             else:
